@@ -6,7 +6,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
-import colombiadex.core.Constants.Companion.ADD_MASCOTA
+import colombiadex.core.Constants.Companion.ADD_POKEMON
 
 @Composable
 fun AddPokemonFloatingActionButton(
@@ -18,7 +18,7 @@ fun AddPokemonFloatingActionButton(
     ) {
         Icon(
             imageVector = Icons.Default.Add,
-            contentDescription = ADD_MASCOTA
+            contentDescription = ADD_POKEMON
         )
     }
 }

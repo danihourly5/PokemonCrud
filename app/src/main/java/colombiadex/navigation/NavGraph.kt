@@ -6,7 +6,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
-import colombiadex.core.Constants.Companion.MASCOTA_ID
+import colombiadex.core.Constants.Companion.POKEMON_ID
 import colombiadex.navigation.Screen.PokemonsScreen
 import colombiadex.navigation.Screen.UpdatePokemonScreen
 import colombiadex.presentation.mascotas.PokemonsScreen
@@ -24,24 +24,24 @@ fun NavGraph(
             route = PokemonsScreen.route
         ) {
             PokemonsScreen(
-                navigateToUpdatePokemonScreen = { mascotaId ->
+                navigateToUpdatePokemonScreen = { pokemonId ->
                     navController.navigate(
-                        "${UpdatePokemonScreen.route}/${mascotaId}"
+                        "${UpdatePokemonScreen.route}/${pokemonId}"
                     )
                 }
             )
         }
         composable(
-            route = "${UpdatePokemonScreen.route}/{$MASCOTA_ID}",
+            route = "${UpdatePokemonScreen.route}/{$POKEMON_ID}",
             arguments = listOf(
-                navArgument(MASCOTA_ID) {
+                navArgument(POKEMON_ID) {
                     type = NavType.IntType
                 }
             )
         ) { backStackEntry ->
-            val mascotaId = backStackEntry.arguments?.getInt(MASCOTA_ID) ?: 0
+            val pokemonId = backStackEntry.arguments?.getInt(POKEMON_ID) ?: 0
             UpdatePokemonScreen(
-                mascotaId = mascotaId,
+                pokemonId = pokemonId,
                 navigateBack = {
                     navController.popBackStack()
                 }

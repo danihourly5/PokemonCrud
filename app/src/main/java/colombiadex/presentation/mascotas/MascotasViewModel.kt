@@ -18,12 +18,13 @@ class PokemonsViewModel @Inject constructor(
     private val repo: PokemonRepository
 ) : ViewModel() {
 
-    var mascota by mutableStateOf(Pokemon(0, NO_VALUE, NO_VALUE))
+    var pokemon by mutableStateOf(Pokemon(0, NO_VALUE, NO_VALUE, NO_VALUE, NO_VALUE, NO_VALUE,
+        NO_VALUE, NO_VALUE))
     var openDialog by mutableStateOf(false)
-    val mascotas = repo.getPokemonsFromRoom()
-    fun addPokemon(mascota: Pokemon) = viewModelScope.launch(Dispatchers.IO)
+    val pokemons = repo.getPokemonsFromRoom()
+    fun addPokemon(pokemon: Pokemon) = viewModelScope.launch(Dispatchers.IO)
     {
-        repo.addPokemonToRoom(mascota)
+        repo.addPokemonToRoom(pokemon)
     }
 
     fun closeDialog() {
@@ -34,31 +35,56 @@ class PokemonsViewModel @Inject constructor(
         openDialog = true
     }
 
-    fun deletePokemon(mascota: Pokemon) =
+    fun deletePokemon(pokemon: Pokemon) =
         viewModelScope.launch(Dispatchers.IO) {
-            repo.deletePokemonFromRoom(mascota)
+            repo.deletePokemonFromRoom(pokemon)
         }
 
-    fun updateAnimal(animal: String) {
-        mascota = mascota.copy(
-            animal = animal
+    fun updateNombre(nombre: String) {
+        pokemon = pokemon.copy(
+            nombre = nombre
         )
     }
 
-    fun updateRaza(raza: String) {
-        mascota = mascota.copy(
-            raza = raza
+    fun updateSuperPoder(superpoder: String) {
+        pokemon = pokemon.copy(
+            superpoder = superpoder
+        )
+    }
+     fun updateGenero(genero: String) {
+        pokemon = pokemon.copy(
+            genero = genero
+        )
+     }
+    fun updateDescripcion(descripcion: String) {
+        pokemon = pokemon.copy(
+            descripcion = descripcion
+        )
+    }
+    fun updatePeso(peso: String) {
+        pokemon = pokemon.copy(
+            peso = peso
+        )
+    }
+    fun updateAltura(altura: String) {
+        pokemon = pokemon.copy(
+            altura = altura
+        )
+    }
+    fun updateCategoria(categoria: String) {
+        pokemon = pokemon.copy(
+            categoria = categoria
         )
     }
 
-    fun updatePokemon(mascota: Pokemon) =
+    fun updatePokemon(pokemon: Pokemon) =
         viewModelScope.launch(Dispatchers.IO) {
-            repo.updatePokemonInRoom(mascota)
+            repo.updatePokemonInRoom(pokemon)
         }
 
     fun getPokemon(id: Int) = viewModelScope.launch(
         Dispatchers.IO
     ) {
-        mascota = repo.getPokemonFromRoom(id)
+        pokemon = repo.getPokemonFromRoom(id)
     }
 }

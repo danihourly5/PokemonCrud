@@ -18,9 +18,9 @@ import colombiadex.domain.model.Pokemon
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun PokemonCard(
-    mascota: Pokemon,
+    pokemon: Pokemon,
     deletePokemon: () -> Unit,
-    navigateToUpdatePokemonScreen: (mascotaId: Int) -> Unit
+    navigateToUpdatePokemonScreen: (pokemonId: Int) -> Unit
 ) {
     Card(
         shape = MaterialTheme.shapes.medium,
@@ -34,7 +34,7 @@ fun PokemonCard(
             .fillMaxWidth(),
         elevation = 3.dp,
         onClick = {
-            navigateToUpdatePokemonScreen(mascota.id)
+            navigateToUpdatePokemonScreen(pokemon.id)
         }
     ) {
         Row(
@@ -44,8 +44,8 @@ fun PokemonCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Column {
-                Text(mascota.animal)
-                Text(mascota.raza)
+                Text(pokemon.nombre)
+                Text(pokemon.superpoder)
             }
             Spacer(
                 modifier = Modifier.weight(1f)

@@ -11,11 +11,11 @@ import colombiadex.presentation.update_mascotas.components.UpdatePokemonTopBar
 @Composable
 fun UpdatePokemonScreen(
     viewModel: PokemonsViewModel = hiltViewModel(),
-    mascotaId: Int,
+    pokemonId: Int,
     navigateBack: () -> Unit
 ) {
     LaunchedEffect(Unit) {
-        viewModel.getPokemon(mascotaId)
+        viewModel.getPokemon(pokemonId)
     }
     Scaffold(
         topBar = {
@@ -26,15 +26,30 @@ fun UpdatePokemonScreen(
         content = { padding ->
             UpdatePokemonContent(
                 padding = padding,
-                mascota = viewModel.mascota,
-                updateAnimal = { animal ->
-                    viewModel.updateAnimal(animal)
+                pokemon = viewModel.pokemon,
+                updateNombre = { nombre ->
+                    viewModel.updateNombre(nombre)
                 },
-                updateRaza = { raza ->
-                    viewModel.updateRaza(raza)
+                updateSuperPoder = { superpoder ->
+                    viewModel.updateSuperPoder(superpoder)
                 },
-                updatePokemon = { mascota ->
-                    viewModel.updatePokemon(mascota)
+                updateGenero = { genero ->
+                    viewModel.updateGenero(genero)
+                },
+                updateDescripcion = { descripcion ->
+                    viewModel.updateDescripcion(descripcion)
+                },
+                updatePeso = { peso ->
+                    viewModel.updatePeso(peso)
+                },
+                updateAltura = { altura ->
+                    viewModel.updateAltura(altura)
+                },
+                updateCategoria = { categoria ->
+                    viewModel.updateCategoria(categoria)
+                },
+                updatePokemon = { pokemon ->
+                    viewModel.updatePokemon(pokemon)
                 },
                 navigateBack = navigateBack
             )

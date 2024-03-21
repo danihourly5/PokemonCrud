@@ -14,20 +14,20 @@ import colombiadex.domain.repository.Pokemons
 @Composable
 fun PokemonsContent(
     padding: PaddingValues,
-    mascotas: Pokemons,
-    deletePokemon: (mascota: Pokemon) -> Unit,
-    navigateToUpdatePokemonScreen: (mascotaId: Int) -> Unit
+    pokemons: Pokemons,
+    deletePokemon: (pokemon: Pokemon) -> Unit,
+    navigateToUpdatePokemonScreen: (pokemonId: Int) -> Unit
 ) {
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
             .padding(padding)
     ) {
-        items(mascotas) { mascota ->
+        items(pokemons) { pokemon ->
             PokemonCard(
-                mascota = mascota,
+                pokemon = pokemon,
                 deletePokemon = {
-                    deletePokemon(mascota)
+                    deletePokemon(pokemon)
                 },
                 navigateToUpdatePokemonScreen =
                 navigateToUpdatePokemonScreen

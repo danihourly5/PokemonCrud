@@ -7,16 +7,16 @@ typealias Pokemons = List<Pokemon>
 
 interface PokemonRepository {
     fun getPokemonsFromRoom(): Flow<Pokemons>
-    fun addPokemonToRoom(mascota: Pokemon)
+    fun addPokemonToRoom(pokemon: Pokemon)
 
     // getPokemonFromRoom
     fun getPokemonFromRoom(id: Int): Pokemon
 
     //updatePokemonInRoom
-    fun updatePokemonInRoom(mascota: Pokemon)
+    fun updatePokemonInRoom(pokemon: Pokemon)
 
     //deletePokemonFromRoom
-    fun deletePokemonFromRoom(mascota: Pokemon)
+    fun deletePokemonFromRoom(pokemon: Pokemon)
 
 
 }

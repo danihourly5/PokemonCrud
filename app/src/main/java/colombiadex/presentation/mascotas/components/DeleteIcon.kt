@@ -5,7 +5,7 @@ import androidx.compose.material.IconButton
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.runtime.Composable
-import colombiadex.core.Constants.Companion.DELETE_MASCOTA
+import colombiadex.core.Constants.Companion.DELETE_POKEMON
 
 @Composable
 fun DeleteIcon(
@@ -14,7 +14,7 @@ fun DeleteIcon(
     IconButton(onClick = deletePokemon) {
         Icon(
             imageVector = Icons.Default.Delete,
-            contentDescription = DELETE_MASCOTA
+            contentDescription = DELETE_POKEMON
         )
     }
 }

@@ -2,7 +2,7 @@ package colombiadex.di
 
 import android.content.Context
 import androidx.room.Room
-import colombiadex.core.Constants.Companion.MASCOTA_TABLE
+import colombiadex.core.Constants.Companion.POKEMON_TABLE
 import colombiadex.data.network.PokemonDB
 import colombiadex.data.network.PokemonDao
 import colombiadex.data.repository.PokemonRepositoryImpl
@@ -23,19 +23,19 @@ class AppModule {
     ) = Room.databaseBuilder(
         context,
         PokemonDB::class.java,
-        MASCOTA_TABLE
+        POKEMON_TABLE
     ).build()
 
     @Provides
     fun providePokemonDao(
-        mascotaDB: PokemonDB
-    ) = mascotaDB.mascotaDao()
+        pokemonDB: PokemonDB
+    ) = pokemonDB.pokemonDao()
 
     @Provides
     fun providePokemonRepository(
-        mascotaDao: PokemonDao
+        pokemonDao: PokemonDao
     ): PokemonRepository = PokemonRepositoryImpl(
-        mascotaDao = mascotaDao
+        pokemonDao = pokemonDao
     )
 
 }

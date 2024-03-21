@@ -6,5 +6,5 @@ import colombiadex.domain.model.Pokemon
 
 @Database(entities = [Pokemon::class], version = 1, exportSchema = false)
 abstract class PokemonDB : RoomDatabase() {
-    abstract fun mascotaDao(): PokemonDao
+    abstract fun pokemonDao(): PokemonDao
 }

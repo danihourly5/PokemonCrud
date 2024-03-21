@@ -5,21 +5,18 @@ import colombiadex.domain.model.Pokemon
 import colombiadex.domain.repository.PokemonRepository
 
 class PokemonRepositoryImpl(
-    private val mascotaDao: PokemonDao
+    private val pokemonDao: PokemonDao
 ) : PokemonRepository {
-    override fun getPokemonsFromRoom() = mascotaDao.getPokemons()
-    override fun addPokemonToRoom(mascota: Pokemon) = mascotaDao.addPokemon(mascota)
+    override fun getPokemonsFromRoom() = pokemonDao.getPokemons()
+    override fun addPokemonToRoom(pokemon: Pokemon) = pokemonDao.addPokemon(pokemon)
 
-    // getPokemon
-    override fun getPokemonFromRoom(id: Int) = mascotaDao.getPokemon(id)
+    override fun getPokemonFromRoom(id: Int) = pokemonDao.getPokemon(id)
 
-    // updatePokemons
-    override fun updatePokemonInRoom(mascota: Pokemon) =
-        mascotaDao.updatePokemon(mascota)
+    override fun updatePokemonInRoom(pokemon: Pokemon) =
+        pokemonDao.updatePokemon(pokemon)
 
-    // deletePokemon
-    override fun deletePokemonFromRoom(mascota: Pokemon) =
-        mascotaDao.deletePokemon(mascota)
+    override fun deletePokemonFromRoom(pokemon: Pokemon) =
+        pokemonDao.deletePokemon(pokemon)
 
 
 }

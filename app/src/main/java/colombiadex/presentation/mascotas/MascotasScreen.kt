@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
-import colombiadex.core.Constants.Companion.MASCOTAS_SCREEN
+import colombiadex.core.Constants.Companion.POKEMON_SCREEN
 import colombiadex.presentation.mascotas.components.AddPokemonAlertDialog
 import colombiadex.presentation.mascotas.components.AddPokemonFloatingActionButton
 import colombiadex.presentation.mascotas.components.PokemonsContent
@@ -15,23 +15,23 @@ import colombiadex.presentation.mascotas.components.PokemonsContent
 @Composable
 fun PokemonsScreen(
     viewModel: PokemonsViewModel = hiltViewModel(),
-    navigateToUpdatePokemonScreen: (mascotaId: Int) -> Unit
+    navigateToUpdatePokemonScreen: (pokemonId: Int) -> Unit
 ) {
-    val mascotas by viewModel.mascotas.collectAsState(
+    val pokemons by viewModel.pokemons.collectAsState(
         initial = emptyList()
     )
     Scaffold(
         topBar = {
             TopAppBar(title = {
-                Text(MASCOTAS_SCREEN)
+                Text(POKEMON_SCREEN)
             })
         },
         content = { padding ->
             PokemonsContent(
                 padding = padding,
-                mascotas = mascotas,
-                deletePokemon = { mascota ->
-                    viewModel.deletePokemon(mascota)
+                pokemons = pokemons,
+                deletePokemon = { pokemon ->
+                    viewModel.deletePokemon(pokemon)
                 },
                 navigateToUpdatePokemonScreen =
                 navigateToUpdatePokemonScreen
@@ -41,8 +41,8 @@ fun PokemonsScreen(
                 closeDialog = {
                     viewModel.closeDialog()
                 },
-                addPokemon = { mascota ->
-                    viewModel.addPokemon(mascota)
+                addPokemon = { pokemon ->
+                    viewModel.addPokemon(pokemon)
                 }
             )
         },

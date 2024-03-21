@@ -7,7 +7,7 @@ import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.runtime.Composable
-import colombiadex.core.Constants.Companion.UPDATE_MASCOTAS_SCREEN
+import colombiadex.core.Constants.Companion.UPDATE_POKEMON_SCREEN
 
 @Composable
 fun UpdatePokemonTopBar(
@@ -15,7 +15,7 @@ fun UpdatePokemonTopBar(
 ) {
     TopAppBar(
         title = {
-            Text(UPDATE_MASCOTAS_SCREEN)
+            Text(UPDATE_POKEMON_SCREEN)
         },
         navigationIcon = {
             IconButton(onClick = { navigateBack() }) {

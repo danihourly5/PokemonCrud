@@ -3,18 +3,18 @@ package colombiadex.core
 class Constants {
     companion object {
         // Room
-        const val MASCOTA_TABLE = "mascota_table"
+        const val POKEMON_TABLE = "pokemon_table"
 
         // Screens
-        const val MASCOTAS_SCREEN = "Pokemons"
-        const val UPDATE_MASCOTAS_SCREEN = "Update mascota"
+        const val POKEMON_SCREEN = "Maestro Pokemon"
+        const val UPDATE_POKEMON_SCREEN = "Update Pokemon"
 
         // Arguments
-        const val MASCOTA_ID = "mascotaId"
+        const val POKEMON_ID = "pokemonId"
 
         // Actions
-        const val ADD_MASCOTA = "Agregar mascota"
-        const val DELETE_MASCOTA = "Borrar una mascota"
+        const val ADD_POKEMON = "Agregar Pokemon"
+        const val DELETE_POKEMON = "Borrar una Pokemon"
 
         // Buttons
         const val ADD = "Agregar"
@@ -22,8 +22,13 @@ class Constants {
         const val UPDATE = "Modificar"
 
         // Placeholders
-        const val ANIMAL = "Tienes un..."
-        const val RAZA = "Escribe la raza de tu mascota"
+        const val NOMBRE = "Nombre de tu Pokemon"
+        const val SUPERPODER = "Que superpoder tiene tu Pokemon"
+        const val GENERO = "Genero de tu Pokemon"
+        const val DESCRIPCION = "Descripcion de tu Pokemon"
+        const val PESO = "Peso de tu Pokemon"
+        const val ALTURA = "Altura de tu Pokemon"
+        const val CATEGORIA = "Categoria de tu Pokemon"
         const val NO_VALUE = ""
 
 
