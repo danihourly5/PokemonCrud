@@ -11,7 +11,7 @@ android {
 
 
     defaultConfig {
-        applicationId "com.fggc.mascotacrud"
+        applicationId "com.colombiadex"
         minSdk 30
         targetSdk 34
         versionCode 1
@@ -47,7 +47,7 @@ android {
             excludes += '/META-INF/{AL2.0,LGPL2.1}'
         }
     }
-    namespace 'com.fggc.mascotacrud'
+    namespace 'com.colombiadex'
 }
 
 dependencies {
