@@ -1,4 +1,4 @@
-package colombiadex.presentation.mascotas
+package colombiadex.presentation.pokemons
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

@@ -1,4 +1,4 @@
-package colombiadex.presentation.mascotas
+package colombiadex.presentation.pokemons
 
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -8,9 +8,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.hilt.navigation.compose.hiltViewModel
 import colombiadex.core.Constants.Companion.POKEMON_SCREEN
-import colombiadex.presentation.mascotas.components.AddPokemonAlertDialog
-import colombiadex.presentation.mascotas.components.AddPokemonFloatingActionButton
-import colombiadex.presentation.mascotas.components.PokemonsContent
+import colombiadex.presentation.pokemons.components.AddPokemonAlertDialog
+import colombiadex.presentation.pokemons.components.AddPokemonFloatingActionButton
+import colombiadex.presentation.pokemons.components.PokemonsContent
 
 @Composable
 fun PokemonsScreen(

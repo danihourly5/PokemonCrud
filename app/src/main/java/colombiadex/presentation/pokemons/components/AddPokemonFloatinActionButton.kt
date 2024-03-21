@@ -1,4 +1,4 @@
-package colombiadex.presentation.mascotas.components
+package colombiadex.presentation.pokemons.components
 
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon

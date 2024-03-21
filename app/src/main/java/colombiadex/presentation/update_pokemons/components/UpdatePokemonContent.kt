@@ -1,4 +1,4 @@
-package colombiadex.presentation.update_mascotas.components
+package colombiadex.presentation.update_pokemons.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column

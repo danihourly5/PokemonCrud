@@ -1,4 +1,4 @@
-package colombiadex.presentation.mascotas.components
+package colombiadex.presentation.pokemons.components
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize

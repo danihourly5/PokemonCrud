@@ -1,12 +1,12 @@
-package colombiadex.presentation.update_mascotas
+package colombiadex.presentation.update_pokemons
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.hilt.navigation.compose.hiltViewModel
-import colombiadex.presentation.mascotas.PokemonsViewModel
-import colombiadex.presentation.update_mascotas.components.UpdatePokemonContent
-import colombiadex.presentation.update_mascotas.components.UpdatePokemonTopBar
+import colombiadex.presentation.pokemons.PokemonsViewModel
+import colombiadex.presentation.update_pokemons.components.UpdatePokemonContent
+import colombiadex.presentation.update_pokemons.components.UpdatePokemonTopBar
 
 @Composable
 fun UpdatePokemonScreen(

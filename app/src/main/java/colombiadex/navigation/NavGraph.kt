@@ -9,8 +9,8 @@ import androidx.navigation.navArgument
 import colombiadex.core.Constants.Companion.POKEMON_ID
 import colombiadex.navigation.Screen.PokemonsScreen
 import colombiadex.navigation.Screen.UpdatePokemonScreen
-import colombiadex.presentation.mascotas.PokemonsScreen
-import colombiadex.presentation.update_mascotas.UpdatePokemonScreen
+import colombiadex.presentation.pokemons.PokemonsScreen
+import colombiadex.presentation.update_pokemons.UpdatePokemonScreen
 
 @Composable
 fun NavGraph(
