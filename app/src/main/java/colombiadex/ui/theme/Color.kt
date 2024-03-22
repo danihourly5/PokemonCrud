@@ -2,7 +2,7 @@ package colombiadex.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val OtherColor = Color(0xFFFFF9C4)
+val PrimaryColor = Color(0xFFF0626E)
+val SecondaryColor = Color(0xFFFFCDD2)
+val ThirdColor = Color(0xFFB3E5FC)

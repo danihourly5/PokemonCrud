@@ -1,7 +1,5 @@
 package colombiadex.presentation.pokemons
 
-import android.util.Log
-import android.widget.Toast
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar

@@ -46,14 +46,6 @@ fun PokemonCard(
                 .padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Column {
-                Text(pokemon.nombre)
-                Text(pokemon.superpoder)
-                Text(pokemon.descripcion)
-            }
-            Spacer(
-                modifier = Modifier.weight(1f)
-            )
             Image(
                 painter = rememberImagePainter(
                     data = pokemon.imageUrl,
@@ -63,8 +55,15 @@ fun PokemonCard(
                 ),
                 contentDescription = "Pokemon",
                 modifier = Modifier
-                    .align(Alignment.CenterVertically)
-                    .padding(end = 8.dp)
+                    .padding(end = 1.dp)
+            )
+            Column {
+                Text(pokemon.nombre)
+                Text(pokemon.superpoder)
+                Text(pokemon.descripcion)
+            }
+            Spacer(
+                modifier = Modifier.weight(1f)
             )
 
             DeleteIcon(

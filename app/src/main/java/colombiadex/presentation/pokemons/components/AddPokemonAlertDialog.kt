@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.AlertDialog
 import androidx.compose.material.Slider
 import androidx.compose.material.Switch
@@ -24,20 +23,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import colombiadex.core.Constants.Companion.ADD
-import colombiadex.core.Constants.Companion.ADD_POKEMON
-import colombiadex.core.Constants.Companion.ALTURA
 import colombiadex.core.Constants.Companion.CATEGORIA
 import colombiadex.core.Constants.Companion.DESCRIPCION
-import colombiadex.core.Constants.Companion.NOMBRE
 import colombiadex.core.Constants.Companion.DISMISS
-import colombiadex.core.Constants.Companion.GENERO
+import colombiadex.core.Constants.Companion.NOMBRE
 import colombiadex.core.Constants.Companion.NO_VALUE
-import colombiadex.core.Constants.Companion.PESO
 import colombiadex.core.Constants.Companion.SUPERPODER
 import colombiadex.domain.model.Pokemon
+import colombiadex.ui.theme.PrimaryColor
+import colombiadex.ui.theme.ThirdColor
 import kotlinx.coroutines.job
 
 @Composable
@@ -59,9 +55,7 @@ fun AddPokemonAlertDialog(
 
         AlertDialog(
             onDismissRequest = { closeDialog },
-            title = {
-                Text(ADD_POKEMON)
-            },
+            backgroundColor = (ThirdColor),
             text = {
                 Column {
                     TextField(
@@ -118,6 +112,7 @@ fun AddPokemonAlertDialog(
                     Spacer(
                         modifier = Modifier.height(16.dp)
                     )
+                    Text(text = "Cuanto Pesa y Mide tu Pokemon?")
                     Slider(
                         value = peso,
                         onValueChange = { newValue ->
@@ -129,9 +124,7 @@ fun AddPokemonAlertDialog(
                         },
                         valueRange = 0f..100f,
                         steps = 100,
-                        onValueChangeFinished = {
-                            // puedes guardar el valor final aquí si es necesario
-                        }
+                        onValueChangeFinished = {}
                     )
                     Text (text = peso.toString())
                     Spacer(
@@ -148,9 +141,7 @@ fun AddPokemonAlertDialog(
                         },
                         valueRange = 0f..100f,
                         steps = 100,
-                        onValueChangeFinished = {
-                            // puedes guardar el valor final aquí si es necesario
-                        }
+                        onValueChangeFinished = {}
                     )
                     Text (text = altura.toString())
                     Spacer(
