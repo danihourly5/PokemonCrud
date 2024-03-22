@@ -16,6 +16,7 @@ import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -51,8 +52,8 @@ fun AddPokemonAlertDialog(
         var superpoder by remember { mutableStateOf(NO_VALUE) }
         var genero by remember { mutableStateOf("Macho") }
         var descripcion by remember { mutableStateOf(NO_VALUE) }
-        var peso by remember { mutableStateOf(0f) }
-        var altura by remember { mutableStateOf(0f) }
+        var peso by remember { mutableFloatStateOf(0f) }
+        var altura by remember { mutableFloatStateOf(0f) }
         var categoria by remember { mutableStateOf(NO_VALUE) }
         val focusRequester = FocusRequester()
 
