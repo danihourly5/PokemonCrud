@@ -14,7 +14,7 @@ fun AddPokemonFloatingActionButton(
 ) {
     FloatingActionButton(
         onClick = openDialog,
-        backgroundColor = MaterialTheme.colors.primary
+        backgroundColor = MaterialTheme.colors.onPrimary
     ) {
         Icon(
             imageVector = Icons.Default.Add,

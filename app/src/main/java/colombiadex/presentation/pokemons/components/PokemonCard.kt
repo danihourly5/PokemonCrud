@@ -1,5 +1,6 @@
 package colombiadex.presentation.pokemons.components
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -13,6 +14,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberImagePainter
+import coil.size.Scale
 import colombiadex.domain.model.Pokemon
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -46,10 +49,24 @@ fun PokemonCard(
             Column {
                 Text(pokemon.nombre)
                 Text(pokemon.superpoder)
+                Text(pokemon.descripcion)
             }
             Spacer(
                 modifier = Modifier.weight(1f)
             )
+            Image(
+                painter = rememberImagePainter(
+                    data = pokemon.imageUrl,
+                    builder = {
+                        scale(Scale.FILL)
+                    }
+                ),
+                contentDescription = "Pokemon",
+                modifier = Modifier
+                    .align(Alignment.CenterVertically)
+                    .padding(end = 8.dp)
+            )
+
             DeleteIcon(
                 deletePokemon = deletePokemon
             )

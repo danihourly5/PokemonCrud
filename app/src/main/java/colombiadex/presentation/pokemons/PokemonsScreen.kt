@@ -1,5 +1,7 @@
 package colombiadex.presentation.pokemons
 
+import android.util.Log
+import android.widget.Toast
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
@@ -43,6 +45,9 @@ fun PokemonsScreen(
                 },
                 addPokemon = { pokemon ->
                     viewModel.addPokemon(pokemon)
+                },
+                showError = { message ->
+                    System.out.println("Error: $message")
                 }
             )
         },

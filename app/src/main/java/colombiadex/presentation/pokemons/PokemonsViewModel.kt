@@ -18,8 +18,8 @@ class PokemonsViewModel @Inject constructor(
     private val repo: PokemonRepository
 ) : ViewModel() {
 
-    var pokemon by mutableStateOf(Pokemon(0, NO_VALUE, NO_VALUE, NO_VALUE, NO_VALUE, NO_VALUE,
-        NO_VALUE, NO_VALUE))
+    var pokemon by mutableStateOf(Pokemon(0, NO_VALUE, NO_VALUE, NO_VALUE, NO_VALUE, 0f,
+        0f, NO_VALUE))
     var openDialog by mutableStateOf(false)
     val pokemons = repo.getPokemonsFromRoom()
     fun addPokemon(pokemon: Pokemon) = viewModelScope.launch(Dispatchers.IO)
@@ -61,12 +61,12 @@ class PokemonsViewModel @Inject constructor(
             descripcion = descripcion
         )
     }
-    fun updatePeso(peso: String) {
+    fun updatePeso(peso: Float) {
         pokemon = pokemon.copy(
             peso = peso
         )
     }
-    fun updateAltura(altura: String) {
+    fun updateAltura(altura: Float) {
         pokemon = pokemon.copy(
             altura = altura
         )

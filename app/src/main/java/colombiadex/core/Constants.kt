@@ -23,7 +23,7 @@ class Constants {
 
         // Placeholders
         const val NOMBRE = "Nombre de tu Pokemon"
-        const val SUPERPODER = "Que superpoder tiene tu Pokemon"
+        const val SUPERPODER = "Su superpoder es..."
         const val GENERO = "Genero de tu Pokemon"
         const val DESCRIPCION = "Descripcion de tu Pokemon"
         const val PESO = "Peso de tu Pokemon"

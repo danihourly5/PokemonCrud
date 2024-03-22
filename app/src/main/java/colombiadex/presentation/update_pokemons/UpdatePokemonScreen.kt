@@ -40,16 +40,19 @@ fun UpdatePokemonScreen(
                     viewModel.updateDescripcion(descripcion)
                 },
                 updatePeso = { peso ->
-                    viewModel.updatePeso(peso)
+                    viewModel.updatePeso(peso.toFloat())
                 },
                 updateAltura = { altura ->
-                    viewModel.updateAltura(altura)
+                    viewModel.updateAltura(altura.toFloat())
                 },
                 updateCategoria = { categoria ->
                     viewModel.updateCategoria(categoria)
                 },
                 updatePokemon = { pokemon ->
                     viewModel.updatePokemon(pokemon)
+                },
+                showError = { message ->
+                    System.out.println("Error: $message")
                 },
                 navigateBack = navigateBack
             )
