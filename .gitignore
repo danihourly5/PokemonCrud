@@ -13,3 +13,14 @@
 .externalNativeBuild
 .cxx
 local.properties
+.idea/.name
+.idea/appInsightsSettings.xml
+.idea/compiler.xml
+.idea/copilot/chatSessions/00000000000.xd
+.idea/copilot/chatSessions/blobs/version
+.idea/copilot/chatSessions/xd.lck
+.idea/gradle.xml
+.idea/kotlinc.xml
+.idea/migrations.xml
+.idea/misc.xml
+.idea/vcs.xml
